@@ -879,18 +879,21 @@ footer  {
     margin: 40px 0;
   }
 
+  #janela-comprar .conneiner-comprar {
+    height: calc(100% - 200px);
+  }
+
   #tela-comprar .conteiner-finalizar {
     flex-direction: column;
+  }
+
+  .items-cesta li .acoes button {
+    display: none;
   }
 
   #tela-comprar .conteiner-finalizar h1 {
     margin-bottom: 20px;
   }
-
-  #janela-comprar .conneiner-comprar {
-    height: calc(100% - 200px);
-  }
-
 }
 
 
