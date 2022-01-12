@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="sortcut icon" href="imagens/icon-super-lanche.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <title>Super lanches</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="max-whidth">
+            <ul class="container-nav">
+                <li><img src="imagens/logo.png" alt="logo"></li>
+                <li><button class="bnt-menu" onclick="acaoMenu()"><h1>Menu <i id="indicador-menu" class="fas fa-angle-down"></i></h1></button></li>
+                <li class="screen-pc"><div class="input-pesquisa"><input type="text" placeholder="Pesquisar"><button class="bnt-pesquisar"><i class="fas fa-search"></i></button></div></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="center-items">
+       <div id="janela-menu" class="janela-menu" style="transform: translateY(60px);">
+            <ul id="buttons-links">
+                <li class="screen-mobile"><div class="input-pesquisa"><input type="text" placeholder="Pesquisar"><button class="bnt-pesquisar"><i class="fas fa-search"></i></button></div></li>
+                <!-- button do menu vai aqui - conteudo.js -->
+            </ul>
+        </div> 
+    </div>
+    <div id="conteiner-topo" class="none">
+        <div class="titulo"></div>
+    </div>
+    <main id="boss" class="max-whidth">
+        <!-- conteudo vai aqui - conteudo.js -->
+        <div class="carregando"><div class="loading1"></div><div class="loading2"></div><h3>Carregando ...</h3></div>
+    </main>
+    <footer>
+        <div class="max-whidth footer-container">
+            <ul>
+                <li><img src="imagens/logo.png" alt=""></li>
+                <li><h3>Endereço</h3><p>CNPJ 00.000.000/0000-00 / Avenida dos Autonomistas, nº 11, Vila maria, itapevi/SP - CEP 0101-010</p></li>
+                <li><h3>Social</h3><div class="redes"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Apartir daqui sao partes escondidas da tela -->
+    <article id="janela-sacola">
+        <div class="previa-sacola max-whidth">
+            <div class="icon-cesta"><img src="imagens/icon-cesta.png" alt="cesta"><span><!-- aqui fica a quantidade de produto da cesta --></span></div>
+            <h1><!-- daqui fica o valar total --></h1>
+            <button onclick="ativaTelaComprar()">Comprar</button>
+        </div>
+    </article>
+
+    <section id="tela-comprar" style="transform: translateY(100vh);">
+        <article class="max-whidth">
+            <div id="janela-comprar">
+                <button id="bnt-fechar" onclick="ativaTelaComprar()"><i class="fas fa-times"></i></button>
+                <div class="titulo"><img src="imagens/icon-cesta.png" alt="icon-cesta"><h1>Pedido</h1></div>
+                <div class="conneiner-comprar">  
+                    <ul class="items-cesta">
+                       <!-- Produdos da cesta vai aqui - conteudo.js --> 
+                    </ul>
+                    <div class="linha"></div>
+                    <div class="formulario">
+                        <div>
+                            <p>Nome completo</p>
+                           <input type="text" id="name" name="nome" class="necessario res">
+                        </div>
+                        <div>
+                            <p>Número de whatsapp</p>
+                            <input type="tel" id="numero" name="numero" class="necessario res">
+                        </div>
+                        <div class="necessario opca1">
+                            <p>Retirar ou entregar ?</p>
+                            <span>
+                                <button id="retirar" onclick="retirarOUentregar(res=0)">Retirar</button>
+                                <button id="entregar" onclick="retirarOUentregar(res=1)">Entregar</button>
+                            </span>
+                        </div>
+                        <div id="endereco" class="none">
+                                <p>Bairro</p>
+                            <input type="text" id="bairro" name="bairro">
+                        </div>
+                        <div id="endereco" class="none">
+                            <article class="rua_numero">
+                                <span>
+                                    <p>Rua</p>
+                                    <input type="text" id="rua" name="rua"> 
+                                </span>
+                                <span>
+                                    <p>Nº</p>
+                                    <input type="text" id="casa" name="casa"> 
+                                </span>
+                            </article>
+                        </div>
+                        <div class="necessario opca2">
+                            <p>Meio de pagamento</p>
+                            <button onclick="tipoPagamento(res=0)">Dinheiro</button>
+                            <button onclick="tipoPagamento(res=1)">Cartão</button>
+                            <button onclick="tipoPagamento(res=2)">Pix</button>
+                        </div>
+                        <div class="opca3 none">
+                            <p>Precisa de troco ?</p>
+                            <span>
+                                <input type="text" id="troco" value="Sim, para:" onclick="trocoS_N(res=0)">
+                                <button onclick="trocoS_N(res=1)">Não</button>
+                            </span>
+                        </div>
+                        <div class="avisoPix none">
+                            <h1>Chave e-mail: <span>superlanches@gmail.com</span></h1>
+                            <p>Você pode fazer transferência pix quando fazer o pedido ou quando for receber o pedido.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="conteiner-finalizar">
+                    <h1>Valor total: <span>-</span></h1>
+                    <button onclick="verificaForm()">Fazer Pedido</button>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+    <script src="javaScripts/conteudo.js"></script>
+    <script src="javaScripts/index.js"></script>
+</body>
+</html>
