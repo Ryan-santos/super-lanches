@@ -905,7 +905,7 @@ footer  {
 
   .items-cesta li p{
     position: unset;
-    margin-right: 20px;
+    margin: 0 10px;
   }
 }
 
