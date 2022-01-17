@@ -36,7 +36,6 @@ async function fetchDados() {
   try {
       const response = await fetch('https://dados-super-lanches-home.herokuapp.com/')
       dados = await response.json()
-      console.log(dados)
       window.document.querySelector('#buttons-links').innerHTML+=`<button class="bnt" onclick="conteudohome()">${dados[0]['values'][0]}</button>`
       for (var x = 1; x < dados.length; x++) {
         window.document.querySelector('#buttons-links').innerHTML+=`<button class="bnt" onclick="conteudoMenu(dadosDoMenu = dados[${x}])">${dados[x]['values'][0]}</button>`

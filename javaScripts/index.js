@@ -69,7 +69,6 @@ function tiraCesta(produto){
 
 function attInfoQuantidade() {
   for(var x = 0; x < cesta.length; x++){
-    console.log(x)
     att(produto = cesta[x].produto)
 }}
 
@@ -282,16 +281,16 @@ function verificaForm() {
         necessario[x].removeAttribute("style")
       }
     }
-    if(x+1 >= necessario.length){ console.log("Tudo preenchido!"),mandaPedido4()}
+    if(x+1 >= necessario.length){mandaPedido4()}
     }
 }
 
 function mandaPedido4(){
-  document.querySelectorAll('#janela-comprar .formulario .res').forEach((item) => console.log(item.value || item.innerText))
+  document.querySelectorAll('#janela-comprar .formulario .res').forEach((item) => item.value || item.innerText)
   document.querySelector('#janela-comprar').innerHTML+= `<div id="notificacao">
     <div class="conteiner-notificacao">
       <i class="fas fa-check"></i>
-      <h1>O pedido está sendo preparado</h1>
+      <h1>O seu pedido está sendo preparado</h1>
       <ul>
           <li>Número do pedido: <span>400</span> </li>
           <li>Quantidade de produtos: <span>${cesta.length}</span></li>

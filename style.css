@@ -287,6 +287,7 @@ img {
 }
 
 .container-produtos .produto {
+  position: relative;
   margin: 20px;
   padding: 10px;
   width: 245px;
@@ -295,14 +296,18 @@ img {
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .produto h3,
 .produto h4 {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
+}
+
+.produto ul {
+  margin-bottom: 40px;
 }
 
 .produto ul li {
@@ -312,7 +317,10 @@ img {
 }
 
 .produto .preco {
+  position: absolute;
+  bottom: 10px;
   margin-top: 15px;
+  width: 92%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -778,18 +786,18 @@ footer  {
 
 #notificacao .conteiner-notificacao i {
   margin: 20px auto;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: #FD7014;
   border-radius: 50%;
   text-align: center;
-  line-height: 150px;
-  font-size: 100px;
+  line-height: 100px;
+  font-size: 70px;
   color: #ffffff;
 }
 
 #notificacao .conteiner-notificacao h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 900;
 }
@@ -801,7 +809,7 @@ footer  {
 #notificacao .conteiner-notificacao ul li,
 #notificacao .conteiner-notificacao ul li span,
 #notificacao .conteiner-notificacao p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 #notificacao .conteiner-notificacao ul li {
