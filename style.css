@@ -902,6 +902,11 @@ footer  {
   #tela-comprar .conteiner-finalizar h1 {
     margin-bottom: 20px;
   }
+
+  .items-cesta li p{
+    position: unset;
+    margin-right: 20px;
+  }
 }
 
 
